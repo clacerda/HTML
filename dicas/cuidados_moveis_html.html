@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidados com os móveis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #FFC107, #FF8F00);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #FF8F00;
+            font-size: 22px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .furniture-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #FFC107;
+            transition: transform 0.2s ease;
+        }
+        
+        .furniture-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .furniture-card h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .furniture-card p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .care-steps {
+            background: #fff8e1;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 10px;
+        }
+        
+        .care-steps h4 {
+            color: #FF8F00;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .care-steps ol {
+            padding-left: 20px;
+        }
+        
+        .care-steps li {
+            padding: 2px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .shopee-link {
+            display: inline-block;
+            background: #ee4d2d;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        .shopee-link:hover {
+            background: #d73211;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #ffebee, #ffcdd2);
+            color: #c62828;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #f44336;
+        }
+        
+        .warning-box h3 {
+            margin-bottom: 10px;
+            color: #d32f2f;
+        }
+        
+        .tip-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .tip-box h3 {
+            margin-bottom: 10px;
+        }
+        
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .material-item {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #ff9800;
+        }
+        
+        .material-item h4 {
+            color: #e65100;
+            margin-bottom: 5px;
+        }
+        
+        .material-item p {
+            font-size: 12px;
+            color: #424242;
+        }
+        
+        .emoji {
+            font-size: 24px;
+        }
+        
+        .damage-prevention {
+            background: #e8f5e8;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .damage-prevention h3 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .damage-prevention ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .damage-prevention li {
+            padding: 5px 0;
+            border-bottom: 1px solid #c8e6c9;
+        }
+        
+        .damage-prevention li:before {
+            content: "🛡️ ";
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🪑 Cuidados com os móveis</h1>
+            <p>Proteja seus móveis durante a mudança</p>
+        </div>
+        
+        <div class="content">
+            <div class="warning-box">
+                <h3>⚠️ Cuidado Especial</h3>
+                <p>Móveis representam grande parte do valor dos seus pertences. Danos podem ser caros e irreversíveis. Investir em proteção adequada vale a pena!</p>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🛏️</span> Móveis de Madeira</h2>
+                
+                <div class="furniture-card">
+                    <h3><span class="emoji">🛏️</span> Camas e Guarda-roupas</h3>
+                    <p>Móveis grandes que geralmente precisam ser desmontados para o transporte.</p>
+                    <div class="care-steps">
+                        <h4>Cuidados específicos:</h4>
+                        <ol>
+                            <li>Desmonte sempre que possível</li>
+                            <li>Guarde parafusos em sacos etiquetados</li>
+                            <li>Proteja cantos e quinas com espuma</li>
+                            <li>Embrulhe em mantas ou plástico</li>
+                            <li>Tire fotos antes de desmontar</li>
+                        </ol>
+                    </div>
+                    <a href="https://shopee.com.br/search?keyword=manta%20protecao%20moveis&affiliate_id=SEU_CODIGO_AQUI" 
+                       class="shopee-link" target="_blank">🛍️ Comprar Mantas</a>
+                </div>
+                
+                <div class="furniture-card">
+                    <h3><span class="emoji">🪑</span> Mesas e Cadeiras</h3>
+                    <p>Cuidado especial com pernas e tampos que podem quebrar ou arranhar.</p>
+                    <div class="care-steps">
+                        <h4>Proteção recomendada:</h4>
+                        <ol>
+                            <li>Remova pernas se possível</li>
+                            <li>Proteja tampos de vidro com plástico bolha</li>
+                            <li>Use cantoneiras nas quinas</li>
+                            <li>Empilhe cadeiras com proteção entre elas</li>
+                        </ol>
+                    </div>
+                    <a href="https://shopee.com.br/search?keyword=cantoneiras%20protecao%20moveis&affiliate_id=SEU_CODIGO_AQUI" 
+                       class="shopee-link" target="_blank">🛍️ Comprar Cantoneiras</a>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📺</span> Eletrônicos e Eletrodomésticos</h2>
+                
+                <div class="furniture-card">
+                    <h3><span class="emoji">📺</span> TVs e Monitores</h3>
+                    <p>Telas são extremamente frágeis e caras para substituir.</p>
+                    <div class="care-steps">
+                        <h4>Proteção essencial:</h4>
+                        <ol>
+                            <li>Use caixa original quando possível</li>
+                            <li>Coloque plástico bolha na tela</li>
+                            <li>Transporte sempre em pé</li>
+                            <li>Fixe bem para não balançar</li>
+                        </ol>
+                    </div>
+                    <a href="https://shopee.com.br/search?keyword=caixa%20tv%20transporte&affiliate_id=SEU_CODIGO_AQUI" 
+                       class="shopee-link" target="_blank">🛍️ Ver Caixas para TV</a>
+                </div>
+                
+                <div class="furniture-card">
+                    <h3><span class="emoji">❄️</span> Geladeira e Freezer</h3>
+                    <p>Requer cuidados especiais devido ao sistema de refrigeração.</p>
+                    <div class="care-steps">
+                        <h4>Procedimento correto:</h4>
+                        <ol>
+                            <li>Desconecte 24h antes da mudança</li>
+                            <li>Limpe e seque completamente</li>
+                            <li>Remova prateleiras e gavetas</li>
+                            <li>Transporte sempre em pé</li>
+                            <li>Aguarde 4h antes de ligar novamente</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="damage-prevention">
+                <h3><span class="emoji">🛡️</span> Prevenção de Danos Comuns</h3>
+                <ul>
+                    <li>Arranhões: Use mantas e papel bolha</li>
+                    <li>Quebras: Embale cantos e quinas</li>
+                    <li>Umidade: Proteja com plástico</li>
+                    <li>Impactos: Fixe bem no caminhão</li>
+                    <li>Perda de peças: Etiquete tudo</li>
+                    <li>Sobrecarga: Respeite peso máximo</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🛠️</span> Materiais de Proteção</h2>
+                
+                <div class="materials-grid">
+                    <div class="material-item">
+                        <h4>🫧 Plástico Bolha</h4>
+                        <p>Para telas e superfícies frágeis</p>
+                    </div>
+                    
+                    <div class="material-item">
+                        <h4>🧽 Espuma</h4>
+                        <p>Proteção de cantos e quinas</p>
+                    </div>
+                    
+                    <div class="material-item">
+                        <h4>🧶 Mantas</h4>
+                        <p>Proteção geral para móveis</p>
+                    </div>
+                    
+                    <div class="material-item">
+                        <h4>📐 Cantoneiras</h4>
+                        <p>Proteção específica para cantos</p>
+                    </div>
+                </div>
+                
+                <div class="furniture-card">
+                    <h3><span class="emoji">🎯</span> Kit Proteção Móveis Completo</h3>
+                    <p>Tenha sempre um kit com todos os materiais essenciais para proteger diferentes tipos de móveis.</p>
+                    <a href="https://shopee.com.br/search?keyword=kit%20protecao%20moveis%20mudanca&affiliate_id=SEU_CODIGO_AQUI" 
+                       class="shopee-link" target="_blank">🛍️ Comprar Kit Completo</a>
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                <h3>💡 Dica de Ouro</h3>
+                <p>Fotografe cada móvel antes de embalar e após chegar no destino. Isso ajuda na identificação de danos e pode ser útil para seguro!</p>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🏠</span> Móveis Especiais</h2>
+                
+                <div class="furniture-card">
+                    <h3><span class="emoji">🎹</span> Piano e Instrumentos</h3>
+                    <p>Requerem cuidado extremo e mão de obra especializada.</p>
+                    <div class="care-steps">
+                        <h4>Cuidados especiais:</h4>
+                        <ol>
+                            <li>Contrate empresa especializada</li>
+                            <li>Proteja teclas e cordas</li>
+                            <li>Controle temperatura e umidade</li>
+                            <li>Afine após a mudança</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="furniture-card">
+                    <h3><span class="emoji">🖼️</span> Quadros e Espelhos</h3>
+                    <p>Vidros são frágeis e podem quebrar facilmente durante o transporte.</p>
+                    <div class="care-steps">
+                        <h4>Proteção recomendada:</h4>
+                        <ol>
+                            <li>Use X com fita adesiva no vidro</li>
+                            <li>Embale com plástico bolha</li>
+                            <li>Transporte em pé, nunca deitado</li>
+                            <li>Separe com papelão entre peças</li>
+                        </ol>
+                    </div>
+                    <a href="https://shopee.com.br/search?keyword=protetor%20quadros%20espelhos&affiliate_id=SEU_CODIGO_AQUI" 
+                       class="shopee-link" target="_blank">🛍️ Ver Protetores</a>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🔧</span> Ferramentas Necessárias</h2>
+                
+                <div class="furniture-card">
+                    <h3><span class="emoji">🧰</span> Kit Desmontagem</h3>
+                    <p>Ferramentas básicas para desmontar e remontar móveis com segurança.</p>
+                    <a href="https://shopee.com.br/search?keyword=kit%20ferramentas%20montagem%20moveis&affiliate_id=SEU_CODIGO_AQUI" 
+                       class="shopee-link" target="_blank">🛍️ Comprar Kit</a>
+                </div>
+                
+                <div class="furniture-card">
+                    <h3><span class="emoji">📱</span> Apps de Montagem</h3>
+                    <p>Use o Moving Manager para fotografar o processo de desmontagem. Isso facilita muito a remontagem!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

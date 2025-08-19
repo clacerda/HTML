@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando Moving Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #007ACC, #0056b3);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #007ACC;
+            font-size: 22px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .step {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #007ACC;
+            position: relative;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: #007ACC;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .step h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+            margin-left: 20px;
+        }
+        
+        .step p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .feature {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #2196f3;
+        }
+        
+        .feature h3 {
+            color: #1976d2;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .feature p {
+            color: #424242;
+            font-size: 14px;
+        }
+        
+        .tip-box {
+            background: linear-gradient(135deg, #4caf50, #45a049);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .tip-box h3 {
+            margin-bottom: 10px;
+        }
+        
+        .shopee-link {
+            display: inline-block;
+            background: #ee4d2d;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .shopee-link:hover {
+            background: #d73211;
+        }
+        
+        .emoji {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📱 Usando Moving Manager</h1>
+            <p>Guia completo para aproveitar ao máximo nosso app</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2><span class="emoji">🚀</span> Primeiros Passos</h2>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Crie sua primeira mudança</h3>
+                    <p>Toque em "➕ Nova Mudança" na tela principal. Defina um nome para sua mudança (ex: "Mudança Apartamento 2024") e a data prevista.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Organize por cômodos</h3>
+                    <p>Crie categorias para cada ambiente da casa. Isso facilitará na hora de embalar e desembalar no destino.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Adicione seus pacotes</h3>
+                    <p>Use "📦 Novo Pacote" para registrar cada caixa. Inclua descrição detalhada do conteúdo e marque itens frágeis.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">⭐</span> Recursos Principais</h2>
+                
+                <div class="feature-grid">
+                    <div class="feature">
+                        <h3>📦 Controle de Pacotes</h3>
+                        <p>Registre todos os seus pacotes com descrições detalhadas e status de embalagem</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <h3>🔍 Busca Rápida</h3>
+                        <p>Encontre qualquer item rapidamente usando nossa ferramenta de busca inteligente</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <h3>📋 Listas de Verificação</h3>
+                        <p>Marque itens como embalados, transportados e desembalados</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <h3>🏷️ Etiquetas Inteligentes</h3>
+                        <p>Gere códigos QR para suas caixas e escaneie para ver o conteúdo</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                <h3>💡 Dica Pro</h3>
+                <p>Use fotos! Tire uma foto do conteúdo antes de fechar cada caixa. Isso economizará horas na hora de procurar itens específicos.</p>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📱</span> Acessórios Recomendados</h2>
+                
+                <div class="step">
+                    <h3>🏷️ Etiquetas QR Code</h3>
+                    <p>Imprima etiquetas com QR codes gerados pelo app para localizar rapidamente o conteúdo das caixas.</p>
+                    <a href="https://shopee.com.br/search?keyword=etiquetas%20qr%20code&affiliate_id=SEU_CODIGO_AQUI" 
+                       class="shopee-link" target="_blank">🛍️ Comprar Etiquetas na Shopee</a>
+                </div>
+                
+                <div class="step">
+                    <h3>📱 Suporte para Celular</h3>
+                    <p>Mantenha o celular sempre à mão para registrar itens e consultar listas durante a mudança.</p>
+                    <a href="https://shopee.com.br/search?keyword=suporte%20celular%20mesa&affiliate_id=SEU_CODIGO_AQUI" 
+                       class="shopee-link" target="_blank">🛍️ Ver Suportes na Shopee</a>
+                </div>
+                
+                <div class="step">
+                    <h3>🔋 Power Bank</h3>
+                    <p>Garanta que seu celular não descarregue durante o dia da mudança. Essencial para usar o app o dia todo.</p>
+                    <a href="https://shopee.com.br/search?keyword=power%20bank%20carregador%20portatil&affiliate_id=SEU_CODIGO_AQUI" 
+                       class="shopee-link" target="_blank">🛍️ Comprar Power Bank na Shopee</a>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">💡</span> Dicas Avançadas</h2>
+                
+                <div class="step">
+                    <h3>🎯 Priorização Inteligente</h3>
+                    <p>Marque caixas com itens essenciais como "PRIORIDADE". O app mostrará essas primeiro na lista de desembalagem.</p>
+                </div>
+                
+                <div class="step">
+                    <h3>📊 Relatórios de Progresso</h3>
+                    <p>Acompanhe estatísticas da sua mudança: quantas caixas foram embaladas, transportadas e desembaladas.</p>
+                </div>
+                
+                <div class="step">
+                    <h3>👥 Compartilhamento</h3>
+                    <p>Compartilhe listas com familiares ou equipe de mudança para que todos saibam o que fazer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

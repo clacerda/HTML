@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidados com os pets na mudança</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #17A2B8, #20C997);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #17A2B8;
+            font-size: 22px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .item-list {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 4px solid #17A2B8;
+            transition: transform 0.2s ease;
+        }
+        
+        .item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .item h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .item p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .shopee-link {
+            display: inline-block;
+            background: #ee4d2d;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            text-align: center;
+        }
+        
+        .shopee-link:hover {
+            background: #d73211;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            color: #8B4513;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #FF6B35;
+        }
+        
+        .warning-box h3 {
+            margin-bottom: 10px;
+            color: #D2691E;
+        }
+        
+        .tip-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .tip-box h3 {
+            margin-bottom: 10px;
+        }
+        
+        .emoji {
+            font-size: 24px;
+        }
+        
+        .checklist {
+            background: #e8f5e8;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .checklist h3 {
+            color: #28A745;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .checklist ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #d4edda;
+        }
+        
+        .checklist li:before {
+            content: "✅ ";
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐕 Cuidados com os pets na mudança</h1>
+            <p>Guia completo para manter seus animais seguros e confortáveis</p>
+        </div>
+        
+        <div class="content">
+            <div class="warning-box">
+                <h3>⚠️ Atenção Especial</h3>
+                <p>Mudanças podem causar muito estresse nos animais. É importante planejar com antecedência e tomar cuidados especiais para garantir o bem-estar dos seus pets.</p>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🎒</span> Itens Essenciais para o Pet</h2>
+                <div class="item-list">
+                    <div class="item">
+                        <h3><span class="emoji">🎒</span> Caixa de Transporte</h3>
+                        <p>Essencial para o transporte seguro. Deve ser do tamanho adequado para o pet ficar confortável.</p>
+                        <a href="https://shopee.com.br/search?keyword=caixa%20transporte%20cachorro%20gato&affiliate_id=SEU_CODIGO_AQUI" 
+                           class="shopee-link" target="_blank">🛍️ Comprar na Shopee</a>
+                    </div>
+                    
+                    <div class="item">
+                        <h3><span class="emoji">🏷️</span> Plaquinha de Identificação</h3>
+                        <p>Com nome do pet, seu telefone e novo endereço. Caso se perca durante a mudança.</p>
+                        <a href="https://shopee.com.br/search?keyword=plaquinha%20identificacao%20pet&affiliate_id=SEU_CODIGO_AQUI" 
+                           class="shopee-link" target="_blank">🛍️ Comprar na Shopee</a>
+                    </div>
+                    
+                    <div class="item">
+                        <h3><span class="emoji">🧸</span> Brinquedos Favoritos</h3>
+                        <p>Mantenha os brinquedos preferidos por perto para dar sensação de familiaridade.</p>
+                        <a href="https://shopee.com.br/search?keyword=brinquedos%20pet%20cachorro%20gato&affiliate_id=SEU_CODIGO_AQUI" 
+                           class="shopee-link" target="_blank">🛍️ Ver Brinquedos na Shopee</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">💊</span> Cuidados com a Saúde</h2>
+                <div class="item-list">
+                    <div class="item">
+                        <h3><span class="emoji">💊</span> Kit Primeiros Socorros Pet</h3>
+                        <p>Tenha sempre um kit básico para emergências durante a mudança.</p>
+                        <a href="https://shopee.com.br/search?keyword=kit%20primeiros%20socorros%20pet&affiliate_id=SEU_CODIGO_AQUI" 
+                           class="shopee-link" target="_blank">🛍️ Comprar na Shopee</a>
+                    </div>
+                    
+                    <div class="item">
+                        <h3><span class="emoji">🌿</span> Calmantes Naturais</h3>
+                        <p>Produtos naturais para ajudar a reduzir o estresse durante o transporte.</p>
+                        <a href="https://shopee.com.br/search?keyword=calmante%20natural%20cachorro%20gato&affiliate_id=SEU_CODIGO_AQUI" 
+                           class="shopee-link" target="_blank">🛍️ Comprar na Shopee</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="checklist">
+                <h3><span class="emoji">📋</span> Checklist do Dia da Mudança</h3>
+                <ul>
+                    <li>Mantenha o pet em local seguro e calmo</li>
+                    <li>Deixe água e comida sempre disponível</li>
+                    <li>Não abra a caixa de transporte em local desconhecido</li>
+                    <li>Leve os pets por último, depois que tudo estiver organizado</li>
+                    <li>Tenha os documentos veterinários em mãos</li>
+                    <li>Configure primeiro o "cantinho" do pet na nova casa</li>
+                </ul>
+            </div>
+            
+            <div class="tip-box">
+                <h3>💡 Dica do Moving Manager</h3>
+                <p>Crie uma caixa especial "PRIORIDADE PET" com todos os itens essenciais do seu animal. Marque bem para ser uma das primeiras a ser desembalada!</p>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🏠</span> Adaptação na Nova Casa</h2>
+                <div class="item-list">
+                    <div class="item">
+                        <h3><span class="emoji">🚪</span> Portões de Segurança</h3>
+                        <p>Para delimitar espaços seguros enquanto o pet se adapta ao novo ambiente.</p>
+                        <a href="https://shopee.com.br/search?keyword=portao%20seguranca%20pet&affiliate_id=SEU_CODIGO_AQUI" 
+                           class="shopee-link" target="_blank">🛍️ Comprar na Shopee</a>
+                    </div>
+                    
+                    <div class="item">
+                        <h3><span class="emoji">🛏️</span> Caminha Confortável</h3>
+                        <p>Uma caminha nova e confortável pode ajudar na adaptação ao novo lar.</p>
+                        <a href="https://shopee.com.br/search?keyword=caminha%20cachorro%20gato%20confortavel&affiliate_id=SEU_CODIGO_AQUI" 
+                           class="shopee-link" target="_blank">🛍️ Comprar na Shopee</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

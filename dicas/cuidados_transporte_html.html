@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidados com transporte</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #8360c3 0%, #2ebf91 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #6F42C1, #5A2D91);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #6F42C1;
+            font-size: 22px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .care-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #6F42C1;
+            transition: transform 0.2s ease;
+        }
+        
+        .care-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .care-item h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .care-item p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .priority-high {
+            border-left-color: #DC3545;
+            background: linear-gradient(135deg, #ffe6e6, #ffcccc);
+        }
+        
+        .priority-high h3 {
+            color: #DC3545;
+        }
+        
+        .priority-medium {
+            border-left-color: #FFC107;
+            background: linear-gradient(135deg, #fff9e6, #fff3cc);
+        }
+        
+        .priority-medium h3 {
+            color: #F57C00;
+        }
+        
+        .shopee-link {
+            display: inline-block;
+            background: #ee4d2d;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            font-size: 14px;
+        }
+        
+        .shopee-link:hover {
+            background: #d73211;
+        }
+        
+        .checklist {
+            background: #e8f5e8;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .checklist h3 {
+            color: #28A745;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .checklist ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #d4edda;
+        }
+        
+        .checklist li:before {
+            content: "☐ ";
+            margin-right: 8px;
+            color: #28A745;
+            font-weight: bold;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            color: #856404;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .warning-box h3 {
+            margin-bottom: 10px;
+            color: #b8860b;
+        }
+        
+        .tip-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .tip-box h3 {
+            margin-bottom: 10px;
+        }
+        
+        .emoji {
+            font-size: 24px;
+        }
+        
+        .protection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .protection-item {
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #9c27b0;
+        }
+        
+        .protection-item h4 {
+            color: #6a1b9a;
+            margin-bottom: 8px;
+        }
+        
+        .protection-item p {
+            font-size: 12px;
+            color: #424242;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚛 Cuidados com transporte</h1>
+            <p>Garanta que seus pertences cheguem seguros ao destino</p>
+        </div>
+        
+        <div class="content">
+            <div class="warning-box">
+                <h3>⚠️ Atenção</h3>
+                <p>O transporte é o momento mais crítico da mudança. Pequenos cuidados podem evitar grandes prejuízos.</p>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📋</span> Antes do Transporte</h2>
+                
+                <div class="care-item priority-high">
+                    <h3><span class="emoji">📸</span> Documentação Fotográfica</h3>
+                    <p>Tire fotos de todos os itens valiosos antes do transporte. Isso serve como prova em caso de danos.</p>
+                </div>
+                
+                <div class="care-item priority-high">
+                    <h3><span class="emoji">📝</span> Inventário Detalhado</h3>
+                    <p>Liste todos os itens com descrições detalhadas. Use o Moving Manager para registrar tudo.</p>
+                </div>
+                
+                <div class="care-item priority-medium">
+                    <h3><span class="emoji">🏷️</span> Etiquetagem Clara</h3>
+                    <p>Marque claramente caixas frágeis, pesadas e prioritárias. Use cores diferentes para cada categoria.</p>
+                    <a href="https://shopee.com.br/search?keyword=etiquetas%20fragil%20cuidado&affiliate_id=SEU_CODIGO_AQUI" 
+                       class="shopee-link" target="_blank">🛍️ Comprar Etiquetas</a>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🛡️</span> Proteção Durante o Transporte</h2>
+                
+                <div class="protection-grid">
+                    <div class="protection-item">
+                        <h4>🫧 Plástico Bolha</h4>
+                        <p>Proteção extra para itens frágeis</p>
+                    </div>
+                    
+                    <div class="protection-item">
+                        <h4>📰 Papel Jornal</h4>
+                        <p>Preenchimento de espaços vazios</p>
+                    </div>
+                    
+                    <div class="protection-item">
+                        <h4>🧽 Espuma</h4>
+                        <p>Para eletrônicos sensíveis</p>
+                    </div>
+                    
+                    <div class="protection-item">
+                        <h4>📦 Caixas Reforçadas</h4>
+                        <p>Para itens pesados e frágeis</p>
+                    </div>
+                </div>
+                
+                <div class="care-item">
+                    <h3><span class="emoji">🎯</span> Kit Proteção Completo</h3>
+                    <p>Tenha sempre à mão materiais extras para proteção durante o carregamento.</p>
+                    <a href="https://shopee.com.br/search?keyword=kit%20mudanca%20plastico%20bolha&affiliate_id=SEU_CODIGO_AQUI" 
+                       class="shopee-link" target="_blank">🛍️ Comprar Kit Proteção</a>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🚛</span> Durante o Carregamento</h2>
+                
+                <div class="care-item priority-high">
+                    <h3><span class="emoji">👁️</span> Supervisão Constante</h3>
+                    <p>Sempre tenha alguém supervisionando o carregamento. Oriente sobre itens frágeis e especiais.</p>
+                </div>
+                
+                <div class="care-item priority-high">
+                    <h3><span class="emoji">📱</span> Comunicação Clara</h3>
+                    <p>Mantenha comunicação constante com a equipe de mudança sobre cuidados especiais.</p>
+                </div>
+                
+                <div class="care-item priority-medium">
+                    <h3><span class="emoji">📊</span> Ordem de Carregamento</h3>
+                    <p>Itens pesados embaixo, frágeis por cima, e sempre bem fixados para não se mover durante o transporte.</p>
+                </div>
+            </div>
+            
+            <div class="checklist">
+                <h3><span class="emoji">✅</span> Checklist do Carregamento</h3>
+                <ul>
+                    <li>Verificar se todos os itens estão no inventário</li>
+                    <li>Confirmar proteção adequada para frágeis</li>
+                    <li>Testar fixação das caixas no caminhão</li>
+                    <li>Deixar itens essenciais por último (fácil acesso)</li>
+                    <li>Documentar qualquer dano preexistente</li>
+                    <li>Guardar documentos importantes com você</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🛣️</span> Durante o Trajeto</h2>
+                
+                <div class="care-item">
+                    <h3><span class="emoji">📍</span> Rastreamento</h3>
+                    <p>Se possível, acompanhe o trajeto ou mantenha contato com o motorista.</p>
+                    <a href="https://shopee.com.br/search?keyword=rastreador%20gps%20veiculo&affiliate_id=SEU_CODIGO_AQUI" 
+                       class="shopee-link" target="_blank">🛍️ Ver Rastreadores</a>
+                </div>
+                
+                <div class="care-item priority-medium">
+                    <h3><span class="emoji">🌡️</span> Cuidados Climáticos</h3>
+                    <p>Proteja itens sensíveis à temperatura e umidade. Evite transporte em dias de chuva forte se possível.</p>
+                </div>
+                
+                <div class="care-item">
+                    <h3><span class="emoji">⏰</span> Tempo Adequado</h3>
+                    <p>Evite pressa excessiva. É melhor chegar com segurança do que rápido com danos.</p>
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                <h3>💡 Dica Profissional</h3>
+                <p>Prepare uma "caixa de emergência" com ferramentas básicas, fita adesiva extra e material de proteção. Leve sempre com você, não no caminhão!</p>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📦</span> Chegada no Destino</h2>
+                
+                <div class="care-item priority-high">
+                    <h3><span class="emoji">🔍</span> Inspeção Imediata</h3>
+                    <p>Verifique todos os itens assim que chegarem. Documente qualquer dano antes que a equipe vá embora.</p>
+                </div>
+                
+                <div class="care-item priority-medium">
+                    <h3><span class="emoji">📋</span> Conferência do Inventário</h3>
+                    <p>Use o Moving Manager para conferir se todos os itens chegaram conforme registrado.</p>
+                </div>
+                
+                <div class="care-item">
+                    <h3><span class="emoji">🏠</span> Posicionamento Estratégico</h3>
+                    <p>Oriente onde cada caixa deve ficar para facilitar o desembalamento posterior.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🛠️</span> Ferramentas Essenciais</h2>
+                
+                <div class="care-item">
+                    <h3><span class="emoji">🧰</span> Kit Ferramentas Transporte</h3>
+                    <p>Tenha sempre: chaves de fenda, alicate, corda, elásticos e fita adesiva reforçada.</p>
+                    <a href="https://shopee.com.br/search?keyword=kit%20ferramentas%20basico&affiliate_id=SEU_CODIGO_AQUI" 
+                       class="shopee-link" target="_blank">🛍️ Comprar Kit</a>
+                </div>
+                
+                <div class="care-item">
+                    <h3><span class="emoji">🦺</span> Equipamentos de Segurança</h3>
+                    <p>Luvas, sapatos antiderrapantes e coletes para identificar a equipe.</p>
+                    <a href="https://shopee.com.br/search?keyword=luvas%20trabalho%20antiderrapante&affiliate_id=SEU_CODIGO_AQUI" 
+                       class="shopee-link" target="_blank">🛍️ Comprar EPI</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
